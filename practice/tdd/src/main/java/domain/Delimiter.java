@@ -1,9 +1,7 @@
 package domain;
 
-public abstract class Delimiter {
-    protected String value;
+public interface Delimiter {
+    public final static String defaultValue = "[,;]";
 
-    public String[] split(String input) {
-        return input.split(value);
-    }
+    String[] split(String input);
 }
